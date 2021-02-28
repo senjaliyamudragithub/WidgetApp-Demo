@@ -3,7 +3,7 @@ import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
 import { render, screen, cleanup } from "@testing-library/react";
 
-describe("RangeCounterB", () => {
+describe("Main component", () => {
   afterEach(cleanup);
   it("renders", () => {
     const history = createMemoryHistory();

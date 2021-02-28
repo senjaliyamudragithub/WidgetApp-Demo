@@ -43,15 +43,15 @@ export default function StepOne({ language, onLangChange }) {
         <InputLabel id="demo-controlled-open-select-label">Language</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
+          data-testid="demo-controlled-open-select"
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
           value={language}
           onChange={handleChange}
         >
-          {languages.map((lang) => (
-            <MenuItem value={lang}>{lang}</MenuItem>
+          {languages.map((lang,idx) => (
+            <MenuItem value={lang} key={idx}>{lang}</MenuItem>
           ))}
         </Select>
       </FormControl>
